@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ha3d test</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="ha3d.css">
+	<script src="main.js"></script>
+	<script src="haFunctions.js"></script>
+	<script src="haAnimation.js"></script>
+	<script src="ha3d.js"></script>
+</head>
+
+<body>
+	<div class="inpBox">
+		<input type="range" id="inpCameraAngle0" name="inpCameraAngle0" min="0" max="360"/>
+		<input type="range" id="inpCameraAngle2" name="inpCameraAngle2" min="0" max="360"/>
+	</div>
+	<div class="inpBox">
+		<input type="range" id="inpBox0EulerAngle0" name="inpBox0EulerAngle0" min="0" max="360"/>
+		<input type="range" id="inpBox0EulerAngle1" name="inpBox0EulerAngle1" min="0" max="360"/>
+		<input type="range" id="inpBox0EulerAngle2" name="inpBox0EulerAngle2" min="0" max="360"/>
+	</div>
+	<div class="container">
+		<div class="ha3d"></div>
+	</div>
+	<input type="range" id="inpLight0Coordinate0" name="inpLight0Coordinate0" min="-200" max="200" orient="vertical"/>
+</body>
+
+</html>

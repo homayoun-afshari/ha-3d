@@ -1,0 +1,10 @@
+valid eventListeners:
+1. [featureName]Change
+2. faceShadeChange
+3. faceVisibilityChange
+4. receivedShadowChange
+5. castShadowChange
+6. causedShadowChange
+7. animationPlay
+8. animationPause
+9. animationEnd

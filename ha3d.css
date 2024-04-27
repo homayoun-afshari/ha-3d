@@ -1,0 +1,47 @@
+.ha3d {
+	transform-style: preserve-3d;
+	user-select: none;
+}
+
+.ha3d>.space {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 0;
+	height: 0;
+	transform-style: preserve-3d;
+}
+.ha3d>.space>.object {
+	position: absolute;
+	width: 0;
+	height: 0;
+	transform-style: preserve-3d;
+}
+
+.ha3d>.space>.object>.face {
+	position: absolute;
+	overflow: hidden;
+	background-color: var(--rgba);
+	outline: 1px solid transparent;
+}
+.ha3d>.space>.plane>.face {
+	background: radial-gradient(var(--rgba) 40%, transparent 60%);
+}
+.ha3d>.space>.object>.face>.defaultContent {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+}
+
+.ha3d>.space>.object>.ground {
+	display: block;
+	position: absolute;
+	pointer-events: none;
+}
+.ha3d>.space>.object>.ground>.shadow {
+	opacity: 30%;
+	fill: black;
+	filter: blur(10px);
+}
