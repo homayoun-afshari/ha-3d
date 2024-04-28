@@ -17,9 +17,9 @@ But that's not all that the 3D World Framework is capable of. It's also designed
 # Installation
 All you need to do is adding following files to your project:
 1. [haFunctions.js](haFunctions.js). It contains general functions required for physics calculations, e.g., `haFuncGetL2Norm` to compute the L2 norm of a vector or `haFuncLinearCombineVectors` to linearly combine vectors according to specified weights. The functions are quite descriptive and perform basic matrix operations that are not supported by the `Math` library.
-2. [haAnimation.js]( haAnimation.js). It contains the `HaAnimation` class, which represents an animation wrapper around a vector. The animation can be controlled using `setVelocity` and `setDestination` methods dynamically. Other methods, such as `play`, `pause`, or `stop`, control the playback of the animation.
+2. [haAnimation.js](haAnimation.js). It contains the `HaAnimation` class, which represents an animation wrapper around a vector. The animation can be controlled using `setVelocity` and `setDestination` methods dynamically. Other methods, such as `play`, `pause`, or `stop`, control the playback of the animation.
 3. [ha3d.css](ha3d.css). It contains the basic CSS properties of a 3D world. Its content is better left unchanged, unless you really want to make some special modifications to the framework.
-4. [ha3d.js]( ha3d.js). This JavaScript file is the heart of the 3D World Framework, where the actual magic happens. It contains multiple classes and functions used to create this framework. In the <a href="https://github.com/homayoun-afshari/ha-3d/blob/main/README.md#more-on-whats-happening-behind-the-scenes">last section</a>, I'll explain them in more detail.
+4. [ha3d.js](ha3d.js). This JavaScript file is the heart of the 3D World Framework, where the actual magic happens. It contains multiple classes and functions used to create this framework. In the <a href="https://github.com/homayoun-afshari/ha-3d/blob/main/README.md#more-on-whats-happening-behind-the-scenes">last section</a>, I'll explain them in more detail.
 
 # Creation
 In order to create a 3D world, first you need to create a 3D canvas, which is just a preferably empty `div` element labeled with `ha3d` as one its classes. That's it, you now have a 3D canvas at your disposal! You can create as many 3D canvases as you want, as long as you properly define them inside your HTML code. Now, to add entities to a 3D canvas, you need to get it in JavaScript. At first, it may look like a simple DOM element, but that's not even remotely what it's capable of! This DOM element is now equipped with the following methods:
@@ -42,4 +42,9 @@ Now, as you might have guessed, you can use the methods of the `Ha3dEntity` clas
 For more information, you can refer to [main.js](main.js). It contains a sample of what I just explained.
 
 # More On What's Happening Behind the Scenes
-
+As I said earlier, [ha3d.js](ha3d.js) is the heart of this framework. It contains classes and functions that make the 3D World Framework possible:
+1. The `Ha3dEntity` class represents any 3D entity inside this framework and contains all the methods I explained in the previous section. However, this class cannot be instantiated directly, as it's a super-class for all other classes in this file.
+2. The `Ha3dWorld` class extends the `Ha3dEntity` class and represents a 3D world. This class is instantiated whenever a 3D world is needed in the code.
+3. The `Ha3dObject` class extends the `Ha3dEntity` class and represents a 3D object inside a 3D world. This class is also a super-class itself and cannot be directly instantiated.
+4. The ` Ha3dPlane`, ` Ha3dCylindroid`, ` Ha3dBox`, and ` Ha3dLight` classes extend the `Ha3dObject` class and directly represent the 3D objects, which are instantiated whenever a 3D object is created in the code.
+5. The functions perform advanced geometrical operations such as coordinates mapping or convex envelope search.
