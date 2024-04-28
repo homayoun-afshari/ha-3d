@@ -21,8 +21,10 @@ All you need to do is adding following files to your project:
 3. [ha3d.css](ha3d.css). It contains the basic CSS properties of a 3D world. Its content is better left unchanged, unless you really want to make some special modifications to the framework.
 4. [ha3d.js]( ha3d.js). This JavaScript file is the heart of the 3D World Framework, where the actual magic happens. It contains multiple classes and functions used to create this framework. In the <a href="https://github.com/homayoun-afshari/ha-3d/blob/main/README.md#more-on-whats-happening-behind-the-scenes">last section</a>, I’ll explain them in more detail.
 
-# Usage
-
+# Creation
+To create a 3D world, all you need is a preferably empty `div` element. Then, you just need to include `ha3d`as one of its classes. That’s it, you now have a 3D world at your disposal! You can create as many 3D worlds as you want, as long as you properly define them inside your HTML codes. Now, to add entities to a 3D world, first you need to get it in JavaScript. At first, it may look like a simple DOM element, but that’s not even remotely what it’s capable of! This DOM element is now equipped with the following methods:
+1. `makeHa3dWorld`.
+2. `makeHa3dObject`.
 
 # More On What’s Happening Behind the Scenes
 
