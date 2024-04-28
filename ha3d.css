@@ -25,7 +25,7 @@
 	outline: 1px solid transparent;
 }
 .ha3d>.space>.plane>.face {
-	background: radial-gradient(var(--rgba) 40%, transparent 60%);
+	background: radial-gradient(var(--rgba) 20%, transparent 60%);
 }
 .ha3d>.space>.object>.face>.defaultContent {
 	position: absolute;

@@ -12,18 +12,19 @@ window.addEventListener('load', ()=> {
 			returnCoordinates: [-0.4*Math.PI, 0, -0.04*Math.PI],
 		});
 	domHa3d.makeHa3dObject('plane')
+		.setFeatureValues('rgba', [80, 80, 80, 1.0])
 		.setFeatureValues('coordinates', [0, 0, 0])
-		.setFeatureValues('sizes', [700, 700]);
+		.setFeatureValues('sizes', [1000, 1000]);
 	domHa3d.makeHa3dObject('cylindroid')
-		.setFeatureValues('rgba', [127, 140, 141, 1.0])
+		.setFeatureValues('rgba', [110, 110, 110, 1.0])
 		.setFeatureValues('coordinates', [0, 0, 10])
 		.setFeatureValues('sizes', [400, 300, 20]);;
 	domHa3d.makeHa3dObject('cylindroid', 12)
-		.setFeatureValues('rgba', [149, 165, 166, 1.0])
+		.setFeatureValues('rgba', [150, 150, 150, 1.0])
 		.setFeatureValues('coordinates', [0, 0, 30])
 		.setFeatureValues('sizes', [200, 200, 20]);
 	domHa3d.makeHa3dObject('box')
-		.setFeatureValues('rgba', [236, 240, 241, 1.0])
+		.setFeatureValues('rgba', [250, 250, 250, 1.0])
 		.setFeatureValues('coordinates', [0, 0, 95])
 		.setFeatureValues('sizes', [50, 60, 70])
 		.setFeatureControllers( 'eulerAngles', [document.getElementById('inpBox0EulerAngle0'), document.getElementById('inpBox0EulerAngle1'), document.getElementById('inpBox0EulerAngle2')])
@@ -39,7 +40,7 @@ window.addEventListener('load', ()=> {
 		});
 	domHa3d.makeHa3dObject('light')
 		.setFeatureValues('coordinates', [90, -30, 170])
-		.setFeatureValues('rgba', [255, 200, 200, 1.0])
+		.setFeatureValues('rgba', [246, 229, 141, 1.0])
 		.setFeatureLimiter('coordinates', (values)=> {
 			const radius = Math.sqrt(Math.pow(values[0], 2) + Math.pow(values[1], 2));
 			if (radius > 200) {
@@ -47,14 +48,13 @@ window.addEventListener('load', ()=> {
 				values[1] *= 200/radius;
 			}
 		})
-		.setFeatureControllers('coordinates', [document.getElementById('inpLight0Coordinate0'), null, null])
 		.setInteraction('coordinates', {
 			hasAnimation: true,
 			actionPlane: 'xy'
 		});
 	domHa3d.makeHa3dObject('light')
 		.setFeatureValues('coordinates', [-90, -30, 190])
-		.setFeatureValues('rgba', [200, 200, 255, 1.0])
+		.setFeatureValues('rgba', [199, 236, 238, 1.0])
 		.setFeatureLimiter('coordinates', (values)=> {
 			const radius = Math.sqrt(Math.pow(values[0], 2) + Math.pow(values[1], 2));
 			if (radius > 200) {
@@ -62,7 +62,6 @@ window.addEventListener('load', ()=> {
 				values[1] *= 200/radius;
 			}
 		})
-		.setFeatureControllers('coordinates', [document.getElementById('inpLight0Coordinate0'), null, null])
 		.setInteraction('coordinates', {
 			actionPlane: 'xy'
 		});
