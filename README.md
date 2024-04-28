@@ -13,3 +13,16 @@ But that’s not all that the 3D World Framework is capable of. It’s also desi
 <p align="center">
 	<img src="demo/01.gif" height="200px">&#9;<img src="demo/02.gif" height="200px">
 </p>
+
+# Installation
+All you need to do is adding following files to your project:
+1. [haFunctions.js](haFunctions.js). It contains general functions required for physics calculations, e.g., `haFuncGetL2Norm` to compute the L2 norm of a vector or `haFuncLinearCombineVectors` to linearly combine vectors according to specified weights.
+2. [haAnimation.js]( haAnimation.js). It contains the `HaAnimation` class, which represents an animation wrapper around a vector. The animation can be controlled using `setVelocity` and `setDestination` methods dynamically. Other methods, such as`play`, `pause`, or `stop, control the playback of the animation.
+3. [ha3d.css](ha3d.css). It contains the basic CSS properties of a 3D world. Its content is better left unchanged, unless you really want to make some special modifications to the framework.
+4. [ha3d.js]( ha3d.js). This JavaScript file is the heart of the 3D World Framework, where the actual magic happens. It contains multiple classes and functions used to create this framework. Later, I’ll explain them in more detail.
+
+# Usage
+
+
+# More On What’s Happening Behind the Scenes
+
