@@ -24,11 +24,12 @@ All you need to do is adding following files to your project:
 # Creation
 In order to create a 3D world, first you need to create a 3D canvas, which is just a preferably empty `div` element labeled with `ha3d` as one its classes. That’s it, you now have a 3D canvas at your disposal! You can create as many 3D canvases as you want, as long as you properly define them inside your HTML code. Now, to add entities to a 3D canvas, you need to get it in JavaScript. At first, it may look like a simple DOM element, but that’s not even remotely what it’s capable of! This DOM element is now equipped with the following methods:
 1. `makeHa3dWorld()`. With this method, you can now create a 3D world, which is in fact a JavaScript object that is an instance of the `Ha3dEntity` class.
-2. `makeHa3dObject(type)`. It creates a 3D object inside your 3D world. The argument `type` specifies the type of the object that you want to create. The object itself is another JavaScript object that is also an instance of the `Ha3dEntity` class.
+2. `makeHa3dObject(type)`. It creates a 3D object inside your 3D world. The argument `type` specifies the type of the object that you want to create. The object itself is another JavaScript object that is also an instance of the `Ha3dEntity` class. Currently, the only valid values for `type` are 'plane', 'cylindroid, 'box', and 'light'.
 
 Now, as you might have guessed, you can use the methods of the `Ha3dEntity` class to manage a 3D world or a 3D object inside it. These methods are as follows:
-1. `setFeatureValues(name, values, isControlled=false)`.
-	- s
+1. `setFeatureValues(name, values, isControlled=false)`. It selects a feature of the 3D entity and sets its values. I’ll explain the argument `name` a bit later. The argument `values` is an array of values with a size that relies on the feature. To avoid changing a single value, you can set it as `null`. The argument `isControlled` specifies if the feature is controlled by an external controlled or not. Now, regarding the argument `name`, 
+	- For a 3D world object, the valid values can be 'perspective’ (1-dimensional) or ‘cameraAngles’ (3-dimensional).
+- For a 3D object, the valid values can be 'rgba’ (4-dimensional), ‘coordinates’ (3-dimensional), ‘sizes’ (3-dimensional), or ‘eulerAngles’ (3-dimensional).
 2. `setFeatureLimiter(name, externalLimiter)`.
 3. `setFeatureControllers(name, domControllers)`.
 4. `setEventListener(title, callback)`.
