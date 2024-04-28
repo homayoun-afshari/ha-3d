@@ -19,7 +19,7 @@ All you need to do is adding following files to your project:
 1. [haFunctions.js](haFunctions.js). It contains general functions required for physics calculations, e.g., `haFuncGetL2Norm` to compute the L2 norm of a vector or `haFuncLinearCombineVectors` to linearly combine vectors according to specified weights.
 2. [haAnimation.js]( haAnimation.js). It contains the `HaAnimation` class, which represents an animation wrapper around a vector. The animation can be controlled using `setVelocity` and `setDestination` methods dynamically. Other methods, such as`play`, `pause`, or `stop, control the playback of the animation.
 3. [ha3d.css](ha3d.css). It contains the basic CSS properties of a 3D world. Its content is better left unchanged, unless you really want to make some special modifications to the framework.
-4. [ha3d.js]( ha3d.js). This JavaScript file is the heart of the 3D World Framework, where the actual magic happens. It contains multiple classes and functions used to create this framework. Later, I’ll explain them in more detail.
+4. [ha3d.js]( ha3d.js). This JavaScript file is the heart of the 3D World Framework, where the actual magic happens. It contains multiple classes and functions used to create this framework. In the <a href="https://github.com/homayoun-afshari/ha-3d/blob/main/README.md#more-on-whats-happening-behind-the-scenes">last section</a>, I’ll explain them in more detail.
 
 # Usage
 
