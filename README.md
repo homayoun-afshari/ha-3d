@@ -28,7 +28,7 @@ In order to create a 3D world, first you need to create a 3D canvas, which is ju
 
 Now, as you might have guessed, you can use the methods of the `Ha3dEntity` class to manage a 3D world or a 3D object inside it. These methods are as follows:
 1. `setFeatureValues(name, values, isControlled=false)`.
- - s
+	- s
 2. `setFeatureLimiter(name, externalLimiter)`.
 3. `setFeatureControllers(name, domControllers)`.
 4. `setEventListener(title, callback)`.
