@@ -28,14 +28,15 @@ In order to create a 3D world, first you need to create a 3D canvas, which is ju
 
 Now, as you might have guessed, you can use the methods of the`Ha3dEntity` class to manage a 3D world or a 3D object inside it. These methods are as follows:
 1. `setFeatureValues(name, values, isControlled=false)`.
-2. `setFeatureLimiter(name, externalLimiter)`.
-3. `setFeatureControllers(name, domControllers)`.
-4. `setEventListener(title, callback)`.
-5. `unsetEventListener(title)`.
-6. `setInteraction(targetFeatureName, parameters={})`.
-7. `unsetInteraction()`.
-8. `setFaceInnerHtml(faceIndex, innerHtml)`.
-9. `unsetFaceInnerHtml()`.
+2.2. s 	
+3. `setFeatureLimiter(name, externalLimiter)`.
+4. `setFeatureControllers(name, domControllers)`.
+5. `setEventListener(title, callback)`.
+6. `unsetEventListener(title)`.
+7. `setInteraction(targetFeatureName, parameters={})`.
+8. `unsetInteraction()`.
+9. `setFaceInnerHtml(faceIndex, innerHtml)`.
+10. `unsetFaceInnerHtml()`.
 
 The [main.js](main.js) file contains a sample of what I just explained.
 
